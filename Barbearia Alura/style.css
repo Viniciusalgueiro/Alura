@@ -12,6 +12,8 @@ p {
     padding: 30px;
 }
 .titulo-principal {
+    font-size: 30px;
+    font-weight: bold;
     padding-left: 20px;
 }
 .titulo-centralizado {
@@ -20,7 +22,7 @@ p {
 p {
     text-align: center;
 }
-#missao {
+#missao{
     font-size: 20px
 }
 
