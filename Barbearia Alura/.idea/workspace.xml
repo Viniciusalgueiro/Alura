@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46a61827-dc44-4ded-8139-131c210eed75" name="Default Changelist" comment="Commit da parte 3 - adicionando um forms">
+    <list default="true" id="46a61827-dc44-4ded-8139-131c210eed75" name="Default Changelist" comment="Commit da parte 4 - Finalizando o forms">
+      <change afterPath="$PROJECT_DIR$/imagens/utensilios.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contato.html" beforeDir="false" afterPath="$PROJECT_DIR$/contato.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +65,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vinic\WebstormProjects\Alura\Barbearia Alura\imagens" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600918026209</updated>
       <workItem from="1600918030594" duration="7708000" />
-      <workItem from="1602036083990" duration="2606000" />
+      <workItem from="1602036083990" duration="5376000" />
     </task>
     <task id="LOCAL-00001" summary="Commit da parte 3 - adicionando um forms">
       <created>1600920612050</created>
@@ -87,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602036333589</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit da parte 4 - Finalizando o forms">
+      <created>1602038739156</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602038739156</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +122,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit da parte 3 - adicionando um forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit da parte 3 - adicionando um forms" />
+    <MESSAGE value="Commit da parte 4 - Finalizando o forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit da parte 4 - Finalizando o forms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602036278761">
@@ -118,9 +134,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601055672653" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1600921193407">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1602038750851">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600921193407" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602038750851" />
   </component>
 </project>
