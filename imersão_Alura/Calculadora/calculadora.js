@@ -20,3 +20,6 @@ if (operacao == 1 ) {
 }else{
 document.write("<h2>" + "Opção invalida" + "</h2>")
 } 
+
+// escrevendo na tela - Document.write
+// usar o mais para concatenar
