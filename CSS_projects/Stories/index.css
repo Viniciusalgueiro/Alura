@@ -1,0 +1,55 @@
+.cena {
+    width: 400px;
+    height: 400px;
+    margin: 30px auto;
+    perspective: 0;
+  }
+  
+  .stories {
+    width: 100%;
+    height: 100%;
+  /*   border: 3px solid #000; */
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotation 40s infinite alternate;
+  }
+  
+  @keyframes rotation {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(720deg); }
+  }
+  
+  
+  .stories__face {
+    position: absolute;
+  }
+  
+  .stories__face--left {
+    background: rgba(255, 1, 1, 0.644);
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%) rotateY(90deg) scaleX(-1);
+    text-align: center;
+    text-shadow: 2cm;
+  }
+  
+  .stories__face--right {
+    background: rgba(92, 92, 221, 0.822);
+    width: 100%;
+    height: 100%;
+    transform: translateX(50%) rotateY(90deg);
+  }
+  
+  .stories__face--back {
+    background: green;
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-200px) scaleX(-1);
+  }
+  
+  .stories__face--front {
+    background: rgb(252, 157, 49);
+    width: 100%;
+    height: 100%;
+    transform: translateZ(200px);
+  }
