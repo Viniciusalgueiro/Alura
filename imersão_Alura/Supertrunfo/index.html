@@ -3,36 +3,23 @@
 <head>
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <title>
-        Imersão Dev - Aula 06
+        Imersão Dev - Aula 07
     </title>
 </head>
 
 <body>
-    <h1>Tabela de classificação</h1>
+    <div class="container">
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-super-trunfo.png" class="page-logo"
+            alt="">
+        <h1 class="page-title">Super Trunfo</h1>
 
-    <table style="width:100%">
-        <thead>
-            <tr>
-                <th>Perfil</th>
-                <th>Nome</th>
-                <th>Vitórias</th>
-                <th>Empates</th>
-                <th>Derrotas</th>
-                <th>Pontos</th>
-                <th></th>
-                <th>Placar</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody id="tabelaJogadores">
-              
-        </tbody>
-    </table>
+        <button onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
 
-    <div class="add-info">
-        <input type="text" placeholder="Adicione a URL da imagem" id="addImagem">
-        <input type="text" placeholder="Adicione o nome do personagem" id="addNome">
-        <button onclick="adicionarPersonagem()">Adicionar</button>
+        <form id="form">
+            <h2>Escolha o seu atributo</h2>
+            <div class="opcoes" id="opcoes"></div>
+            <button type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
+        </form>
     </div>
 </body>
 <script type="text/javascript" src="index.js"></script>

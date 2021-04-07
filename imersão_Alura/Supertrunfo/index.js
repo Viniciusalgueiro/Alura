@@ -1,96 +1,79 @@
-// objetos 
-var paulo = {
-    nome: "Paulo",
-    vitorias: 0,
-    empates: 0,
-    derrotas: 0,
-    ponto: 0,
-    perfil:'https://uploads.jovemnerd.com.br/wp-content/uploads/2021/02/JUJUTSU-KAISEN-DEDO-DO-SUKUNA-VIRA-DOCE.jpg'
+var cartaPaulo = {
+    nome: "Seiya de Pegaso",
+    atributos: {
+        ataque: 80,
+        defesa: 60,
+        magia: 90
+    }
 }
 
-var vinicius = {
-    nome: "vinicius",
-    vitorias: 0,
-    empates: 0,
-    derrotas: 0,
-    ponto: 0,
-    perfil:'https://avatars.githubusercontent.com/u/68074908?v=4'
+var cartaRafa = {
+    nome: "Bulbasauro",
+    atributos: {
+        ataque: 70,
+        defesa: 65,
+        magia: 85
+    }
 }
 
-
-vinicius.pontos = calculatePontos(vinicius) 
-
-paulo.pontos = calculatePontos(paulo)
-
-function calculatePontos(jogador){
-    var pontos = (jogador.vitorias * 3 ) + jogador.empates
-    return pontos
-}
-
-var jogadores = [vinicius , paulo ]
-
-exibir(jogadores)
-
-function exibir(jogadores){
-    var html = ""
-    for(var i= 0; i<jogadores.length; i++){
-        html += `<tr><td><img src=${jogadores[i].perfil}"></td>`
-        html += "<td>" + jogadores[i].nome + "</td>"
-        html += "<td>" + jogadores[i].vitorias + "</td>"
-        html += "<td>" + jogadores[i].empates + "</td>"
-        html += "<td>" + jogadores[i].derrotas + "</td>"
-        html += "<td>" + jogadores[i].pontos + "</td>"
-        html += "<td><button onClick='adicionarVitoria(" + i + ")'>Vitória</button></td>"
-        html +="<td><button onClick='adicionarEmpate(" + i + ")'>Empate</button></td>"
-        html +="<td><button onClick='adicionarDerrota(" + i + ")'>Derrota</button></td></tr>"
-        }
-    var tabelaJogadores = document.getElementById('tabelaJogadores')
-    tabelaJogadores.innerHTML = html
-
-}
-function adicionarjogadores(i){
-    var nomejogador = document.getElementById("addNome").value
-    var imagem = document.getElementById("addImagem").value
-    
-    if (imagem.endsWith("jpg") || imagem.endsWith("png")) {
-        var jogador = {
-            nome: jogador,
-            vitorias: 0,
-            empates: 0,
-            derrotas: 0,
-            pontos: 0,
-            perfil: imagem
-        }
-        jogadores.push(jogador)
-        exibir(jogadores)
-        document.getElementById("addNome").value = ""
-        document.getElementById("addImagem").value = ""
-    } else {
-        alert("Tente novamente")
-        document.getElementById("addNome").value = ""
-        document.getElementById("addImagem").value = ""
+var cartaGui = {
+    nome: "Lorde Darth Vader",
+    atributos: {
+        ataque: 88,
+        defesa: 62,
+        magia: 90
     }
 }
 
 
-function adicionarVitoria(i) {
-    var jogador = jogadores[i]
-    jogador.vitorias++
-    jogador.pontos = calculatePontos(jogador)
-    exibir(jogadores)
-}
-function adicionarEmpate(i) {
-    var jogador = jogadores[i]
-    jogador.empates++
-    jogador.pontos = calculatePontos(jogador)
-    exibir(jogadores)
-}   
-function adicionarDerrota(i) { 
-    var jogador = jogadores[i]
-    jogador.derrotas++
-    jogador.pontos = calculatePontos(jogador)
-    exibir(jogadores)
+var cartaMaquina
+var cartaJogador
+var cartas = [cartaPaulo, cartaRafa, cartaGui]
+// 0          1           2
+
+function sortearCarta() {
+    var numeroCartaMaquina = parseInt(Math.random() * 3)
+    cartaMaquina = cartas[numeroCartaMaquina]
+
+    var numeroCartaJogador = parseInt(Math.random() * 3)
+    while (numeroCartaJogador == numeroCartaMaquina) {
+        numeroCartaJogador = parseInt(Math.random() * 3)
+    }
+    cartaJogador = cartas[numeroCartaJogador]
+    console.log(cartaJogador)
+
+    document.getElementById('btnSortear').disabled = true
+    document.getElementById('btnJogar').disabled = false
+    exibirOpcoes()
 }
 
-//https://codepen.io/caiochristhian/pen/eYggNQN
-//https://codepen.io/pietrodessotti/pen/BapLqWG
+function exibirOpcoes() {
+    var opcoes = document.getElementById('opcoes')
+    var opcoesTexto = ""
+    for (var atributo in cartaJogador.atributos) {
+        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo
+    }
+    opcoes.innerHTML = opcoesTexto
+}
+
+function obtemAtributoSelecionado() {
+    var radioAtributo = document.getElementsByName('atributo')
+    for (var i = 0; i < radioAtributo.length; i++) {
+        if (radioAtributo[i].checked) {
+            return radioAtributo[i].value
+        }
+    }
+}
+
+function jogar() {
+    var atributoSelecionado = obtemAtributoSelecionado()
+
+    if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
+        alert('Venceu a carta máquina')
+    } else if (cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
+        alert('Perdeu. Carta da máquina é maior')
+    } else {
+        alert('Empatou!')
+    }
+    console.log(cartaMaquina)
+}

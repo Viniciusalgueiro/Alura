@@ -34,7 +34,7 @@ exibir(jogadores)
 function exibir(jogadores){
     var html = ""
     for(var i= 0; i<jogadores.length; i++){
-        html += `<tr><td><img src=${jogadores[i].perfil}"></td>`
+        html += `<tr><td><img src=${jogadores[i].perfil}></td>`
         html += "<td>" + jogadores[i].nome + "</td>"
         html += "<td>" + jogadores[i].vitorias + "</td>"
         html += "<td>" + jogadores[i].empates + "</td>"
